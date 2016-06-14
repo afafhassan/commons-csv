@@ -1,9 +1,9 @@
 dependencies:
   post:
-    - cp ~/commons-csv/src/site/site.xml /etc/apache2/sites-available
-    - a2ensite site.xml
     - sudo service apache2 restart
 test:
+ override
+  - mvn clean package
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
