@@ -1,6 +1,9 @@
 dependencies:
   post:
     - sudo service apache2 restart
+checkout:
+  post:
+    - mkdir -p log
 test:
  override:
    - mvn clean package
