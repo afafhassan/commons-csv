@@ -1,7 +1,7 @@
 dependencies:
   post:
     - cp ~/commons-csv/src/site/site.xml /etc/apache2/sites-available
-    - a2ensite site
+    - a2ensite site.xml
     - sudo service apache2 restart
 test:
  post:
