@@ -12,7 +12,6 @@ test:
   - pwd
   - ls -l src/test/resources/CSVFileParser
   - ls -ld src/test/resources/CSVFileParser
-  - FILE=$CIRCLE_ARTIFACTS/memory-usage-actual.txt; while true; do ps -u ubuntu eo pid,%cpu,%mem,args,uname --sort=-%mem >> $FILE; echo "----------" >> $FILE; sleep 1; done: # note the colon herebackground: true
  override:
    - mvn -X integration-test
  post:
