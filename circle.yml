@@ -6,7 +6,7 @@ checkout:
     - mkdir -p log
 test:
  pre:
-  -pwd
+  - pwd
  override:
    - mvn -X clean package
  post:
